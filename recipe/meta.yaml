@@ -16,7 +16,7 @@ build:
     - proxy_server = pyleco.coordinators.proxy_server:main
     - starter = pyleco.management.starter:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
