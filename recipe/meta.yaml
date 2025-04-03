@@ -15,8 +15,8 @@ build:
     - coordinator = pyleco.coordinators.coordinator:main
     - proxy_server = pyleco.coordinators.proxy_server:main
     - starter = pyleco.management.starter:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
