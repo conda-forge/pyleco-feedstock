@@ -1,13 +1,13 @@
 {% set name = "pyleco" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0.post1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pymeasure/pyleco/archive/refs/tags/v{{ version }}-cf.tar.gz
-  sha256: a04a01e7a677dfd9f0e644cc712d80df1790b136b06c0bfec9be93590fd0357b
+  url: https://github.com/pymeasure/pyleco/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 498d6601741c8c631556398cea6f28c13fe264ccc8eb6dc268cbd68db87890f5
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
     - proxy_server = pyleco.coordinators.proxy_server:main
     - starter = pyleco.management.starter:main
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
