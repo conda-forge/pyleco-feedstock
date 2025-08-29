@@ -1,5 +1,5 @@
 {% set name = "pyleco" %}
-{% set version = "0.5.0.post1" %}
+{% set version = "0.6.0.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pymeasure/pyleco/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 498d6601741c8c631556398cea6f28c13fe264ccc8eb6dc268cbd68db87890f5
+  sha256: 422203e14ff6d79fca482b6782778d6480c6a8ae847ce65a153727537e3cb8ff
 
 build:
   noarch: python
